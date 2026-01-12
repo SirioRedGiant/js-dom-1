@@ -17,13 +17,18 @@ console.log(lampadina);
 //note  Arthur Exercise: partendo dall'esercizio bonus fai in modo che dal quinto clic la lampadina si rompa
 
 let countOfClick = 0;
-
+/**
+ * Funzione che aumenta il contatore di click. Fino a quando il contatore non raggiunge 5 l'interruttore continuerà a spegnere accendere la lampadina. Altrimenti grazie a return uscire dalla funzione dopo aver renderizzata la rottura della lampadina
+ */
 interruttoreLuce.addEventListener("click", () => {
   countOfClick += 1;
+  // verificare se si è raggiunto il numero di click
   if (countOfClick >= 5) {
     lampadina.src = "./assets/img/exploded_lamp.jpg";
     interruttoreLuce.innerText = "La lampadina si è rotta";
+    //fixed Se si arriva ai 5 click si può uscire dalla funzione
     return;
+    // se no si continua normalmente il controllo accesa o spenta
   } else {
     if (lampadina.src.includes("white")) {
       lampadina.src = "./assets/img/yellow_lamp.png";
