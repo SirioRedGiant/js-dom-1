@@ -15,6 +15,17 @@ console.log(lampadina);
 //^   console.log(interruttoreLuce);
 
 
+//note  Arthur Exercise: partendo dall'esercizio bonus fai in modo che dal quinto clic la lampadina si rompa
+
+let countOfClick = 0
+
+interruttoreLuce.addEventListener("click", () => {
+  countOfClick += 1
+})
+
+if (countOfClick >= 5) {
+  lampadina.src = "./assets/img/exploded_lamp.png"
+}
 //! ESERCIZIO BONUS
 //  Funzione ad uso singolo "SENZA NOME" che data un'azione verifica se l'immagine attualmente renderizzata è spenta/accesa attraverso .includes come condizione e se lo è la spegne altrimenti l'accende
 
