@@ -24,8 +24,20 @@ interruttoreLuce.addEventListener("click", () => {
 })
 
 if (countOfClick >= 5) {
-  lampadina.src = "./assets/img/exploded_lamp.png"
+  lampadina.src = "./assets/img/exploded_lamp.jpg"
+  else {
+    if (lampadina.src.includes("white")) {
+    lampadina.src = "./assets/img/yellow_lamp.png";
+    interruttoreLuce.innerText = "Turn-off";
+    console.log(lampadina);
+  } else {
+    lampadina.src = "./assets/img/white_lamp.png";
+    interruttoreLuce.innerText = "Turn-on";
+    console.log(lampadina);
+  }
+  }
 }
+/*
 //! ESERCIZIO BONUS
 //  Funzione ad uso singolo "SENZA NOME" che data un'azione verifica se l'immagine attualmente renderizzata è spenta/accesa attraverso .includes come condizione e se lo è la spegne altrimenti l'accende
 
@@ -41,3 +53,4 @@ interruttoreLuce.addEventListener("click", () => {
     console.log(lampadina);
   }
 });
+*/
