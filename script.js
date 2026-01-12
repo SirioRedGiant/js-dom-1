@@ -3,7 +3,7 @@ const interruttoreLuce = document.getElementById("interruttore");
 
 //todo usare w3school per trovare le proprietà e i metodi: link => https://www.w3schools.com/jsref/dom_obj_document.asp
 console.log(lampadina);
-/*
+
 // Funzione che data un azione(CLICK) cambia l'immagine della lampadina spenta a quella accesa
 interruttoreLuce.addEventListener("click", () => {
   lampadina.src = "./assets/img/yellow_lamp.png";
@@ -12,9 +12,9 @@ interruttoreLuce.addEventListener("click", () => {
   interruttoreLuce.innerText = "turned_on";
   console.log(lampadina);
 });
-console.log(lampadina);
-*/
+console.log(interruttoreLuce);
 
+/*
 //! ESERCIZIO BONUS
 //  Funzione ad uso singolo "SENZA NOME" che data un'azione verifica se l'immagine attualmente renderizzata è spenta/accesa attraverso .includes come condizione e se lo è la spegne altrimenti l'accende
 
@@ -30,3 +30,4 @@ interruttoreLuce.addEventListener("click", () => {
     console.log(lampadina);
   }
 });
+*/
