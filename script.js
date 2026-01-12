@@ -7,6 +7,9 @@ console.log(lampadinaSpenta);
 // Funzione che data un azione(CLICK) cambia l'immagine della lampadina spenta a quella accesa
 interruttoreLuce.addEventListener("click", () => {
   lampadinaSpenta.src = "./assets/img/yellow_lamp.png";
+
+  // cambia il testo del bottone in accesa
+  interruttoreLuce.innerText = "turned_on";
   console.log(lampadinaSpenta);
 });
 console.log(lampadinaSpenta);
