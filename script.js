@@ -7,36 +7,35 @@ console.log(lampadina);
 //^   // Funzione che data un azione(CLICK) cambia l'immagine della lampadina spenta a quella accesa
 //^   interruttoreLuce.addEventListener("click", () => {
 //^     lampadina.src = "./assets/img/yellow_lamp.png";
-//^   
+//^
 //^     // cambia il testo del bottone in accesa
 //^     interruttoreLuce.innerText = "turned_on";
 //^     console.log(lampadina);
 //^   });
 //^   console.log(interruttoreLuce);
 
-
 //note  Arthur Exercise: partendo dall'esercizio bonus fai in modo che dal quinto clic la lampadina si rompa
 
-let countOfClick = 0
+let countOfClick = 0;
 
 interruttoreLuce.addEventListener("click", () => {
-  countOfClick += 1
-})
-
-if (countOfClick >= 5) {
-  lampadina.src = "./assets/img/exploded_lamp.jpg"
-  else {
-    if (lampadina.src.includes("white")) {
-    lampadina.src = "./assets/img/yellow_lamp.png";
-    interruttoreLuce.innerText = "Turn-off";
-    console.log(lampadina);
+  countOfClick += 1;
+  if (countOfClick >= 5) {
+    lampadina.src = "./assets/img/exploded_lamp.jpg";
+    interruttoreLuce.innerText = "La lampadina si è rotta";
+    return;
   } else {
-    lampadina.src = "./assets/img/white_lamp.png";
-    interruttoreLuce.innerText = "Turn-on";
-    console.log(lampadina);
+    if (lampadina.src.includes("white")) {
+      lampadina.src = "./assets/img/yellow_lamp.png";
+      interruttoreLuce.innerText = "Turn-off";
+      console.log(lampadina);
+    } else {
+      lampadina.src = "./assets/img/white_lamp.png";
+      interruttoreLuce.innerText = "Turn-on";
+      console.log(lampadina);
+    }
   }
-  }
-}
+});
 /*
 //! ESERCIZIO BONUS
 //  Funzione ad uso singolo "SENZA NOME" che data un'azione verifica se l'immagine attualmente renderizzata è spenta/accesa attraverso .includes come condizione e se lo è la spegne altrimenti l'accende
