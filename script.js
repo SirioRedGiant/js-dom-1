@@ -24,7 +24,7 @@ interruttoreLuce.addEventListener("click", () => {
   countOfClick += 1;
   // verificare se si è raggiunto il numero di click
   if (countOfClick >= 5) {
-    lampadina.src = "./assets/img/exploded_lamp.jpg";
+    lampadina.src = "./assets/img/exploded_lamp.png";
     interruttoreLuce.innerText = "La lampadina si è rotta";
     //fixed Se si arriva ai 5 click si può uscire dalla funzione
     return;
